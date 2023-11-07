@@ -28,4 +28,8 @@ describe("Yams", () => {
     it("should not return 28 points if 3 dice are not the same and 2 dice are not the same (Brelan)", () => {
         expect(calculatePoints([4, 4, 3, 3, 2])).not.toBe(28);
     });
+
+    it("should return 40 points if all dice are in order (Grande suite)", () => {
+        expect(calculatePoints([1, 2, 3, 4, 5])).toBe(40);
+    });
 });

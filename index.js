@@ -21,6 +21,10 @@ function calculatePoints(dice) {
         }
         return 28;
     }
+
+    if (dice.sort().join("") === "12345" || dice.sort().join("") === "23456") {
+        return 40;
+    }
 }
 
 module.exports = calculatePoints;
