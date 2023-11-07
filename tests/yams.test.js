@@ -18,4 +18,14 @@ describe("Yams", () => {
     it("should return 30 points if 3 dice are the same and 2 dice are the same (Full)", () => {
         expect(calculatePoints([4, 4, 4, 3, 3])).toBe(30);
     });
+    it("should not return 30 points if 3 dice are not the same and 2 dice are the same (Full)", () => {
+        expect(calculatePoints([4, 5, 3, 3, 3])).not.toBe(30);
+    });
+
+    it("should return 28 points if 3 dice are the same and 2 dice are not the same (Brelan)", () => {
+        expect(calculatePoints([4, 4, 4, 3, 2])).toBe(28);
+    });
+    it("should not return 28 points if 3 dice are not the same and 2 dice are not the same (Brelan)", () => {
+        expect(calculatePoints([4, 4, 3, 3, 2])).not.toBe(28);
+    });
 });
