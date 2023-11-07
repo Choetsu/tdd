@@ -14,6 +14,13 @@ function calculatePoints(dice) {
     if (maxCount === 4) {
         return 35;
     }
+
+    if (maxCount === 3) {
+        if (counts.includes(2)) {
+            return 30;
+        }
+        return 28;
+    }
 }
 
 module.exports = calculatePoints;

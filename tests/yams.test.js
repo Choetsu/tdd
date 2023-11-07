@@ -14,4 +14,8 @@ describe("Yams", () => {
     it("should not return 35 points if 4 dice are not the same (Carré)", () => {
         expect(calculatePoints([4, 4, 4, 3, 3])).not.toBe(35);
     });
+
+    it("should return 30 points if 3 dice are the same and 2 dice are the same (Full)", () => {
+        expect(calculatePoints([4, 4, 4, 3, 3])).toBe(30);
+    });
 });
