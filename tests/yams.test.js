@@ -35,4 +35,11 @@ describe("Yams", () => {
     it("should not return 40 points if all dice are not in order (Grande suite)", () => {
         expect(calculatePoints([1, 2, 3, 4, 6])).not.toBe(40);
     });
+
+    it("should return sum of all dice if no other combination (Chance)", () => {
+        expect(calculatePoints([1, 2, 3, 4, 6])).toBe(16);
+    });
+    it("should not return sum of all dice if he exists another combination (Chance)", () => {
+        expect(calculatePoints([1, 2, 3, 4, 5])).not.toBe(15);
+    });
 });

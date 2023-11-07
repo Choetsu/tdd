@@ -25,6 +25,8 @@ function calculatePoints(dice) {
     if (dice.sort().join("") === "12345" || dice.sort().join("") === "23456") {
         return 40;
     }
+
+    return dice.reduce((acc, val) => acc + val, 0);
 }
 
 module.exports = calculatePoints;
