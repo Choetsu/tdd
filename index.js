@@ -10,6 +10,10 @@ function calculatePoints(dice) {
     if (maxCount === 5) {
         return 50;
     }
+
+    if (maxCount === 4) {
+        return 35;
+    }
 }
 
 module.exports = calculatePoints;
