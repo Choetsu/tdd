@@ -32,4 +32,7 @@ describe("Yams", () => {
     it("should return 40 points if all dice are in order (Grande suite)", () => {
         expect(calculatePoints([1, 2, 3, 4, 5])).toBe(40);
     });
+    it("should not return 40 points if all dice are not in order (Grande suite)", () => {
+        expect(calculatePoints([1, 2, 3, 4, 6])).not.toBe(40);
+    });
 });
